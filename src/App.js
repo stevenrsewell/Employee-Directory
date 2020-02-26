@@ -7,33 +7,49 @@ import EmployeeTable from './components/EmployeeTable'
 function App() {
 
   const [ tableData, setTableData ] = useState(employeeData)
-
-  console.log(tableData);
+  const [ sortDesc, setSortDesc ] = useState(false)
+  const [ search, setSearch ] = useState("")
 
   const handleAgeSort = () => {
     const newState = [...tableData]
-    function compare( a, b ) {
-      console.log('comparing');
-      if ( a.age < b.age ){
-        return -1;
+
+    if (sortDesc) {
+      function compareA( a, b ) {
+        console.log('comparing');
+        if ( a.age < b.age ){
+          return -1;
+        }
+        if ( a.age > b.age ){
+          return 1;
+        }
+        return 0;
       }
-      if ( a.age > b.age ){
-        return 1;
+      newState.sort( compareA )
+      setSortDesc(!sortDesc)
+
+    } else {
+      function compareB( a, b ) {
+        console.log('comparing');
+        if ( a.age > b.age ){
+          return -1;
+        }
+        if ( a.age < b.age ){
+          return 1;
+        }
+        return 0;
       }
-      return 0;
+      newState.sort( compareB )
+      setSortDesc(!sortDesc)
     }
-    newState.sort( compare )
+
+
+
+
     setTableData(newState)
   }
 
-  const funstuff = () => {
-    return tableData.map((data) => {
-      return (
-        <div>
-          { data.age }
-        </div>
-      )
-    })
+  const handleSearch = event => {
+    setSearch(event.target.value)
   }
 
   return (
@@ -42,8 +58,8 @@ function App() {
         <Navbar.Brand >Company</Navbar.Brand>
       </Navbar>
       <Container>
-        < EmployeeTable employeeData={tableData} handleAgeSort={handleAgeSort}/>
-        { funstuff() }
+        < input type="text" value={search} onChange={handleSearch} />
+        < EmployeeTable search={search} employeeData={tableData} handleAgeSort={handleAgeSort}/>
       </Container>
     </>
   );
