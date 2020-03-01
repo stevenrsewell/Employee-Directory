@@ -1,5 +1,5 @@
 {
-  "name": "directory-example",
+  "name": "employee-directory",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,20 @@
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenrsewell/Employee-Directory.git"
+  },
+  "keywords": [
+    "Employee",
+    "Profile",
+    "Directory"
+  ],
+  "author": "Steven Sewell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenrsewell/Employee-Directory/issues"
   },
   "scripts": {
     "start": "react-scripts start",

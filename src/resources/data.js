@@ -1,18 +1,37 @@
-
 export const employeeData = [
   {
-    name: "joe",
-    position: "napper",
-    age: 107
+    name: "Steven Stamkos",
+    position: "Center",
+    age: 30
   },
   {
-    name: "stacey",
-    position: "napper",
-    age: 4
+    name: "Aaron Judge",
+    position: "Outfielder",
+    age: 27
   },
   {
-    name: "bob ",
-    position: "manager",
-    age: 40
+    name: "Tom Brady",
+    position: "Quarterback",
+    age: 41
+  },
+  {
+    name: "Matt Ryan",
+    position: "Quarterback",
+    age: 34
+  },
+  {
+    name: "Sidney Crosby",
+    position: "Center",
+    age: 32
+  },
+  {
+    name: "Kyler Murray",
+    position: "Quarterback",
+    age: 22
+  },
+  {
+    name: "Alex Ovechkin",
+    position: "Left Wing",
+    age: 34
   },
 ]
