@@ -16,4 +16,5 @@ This application is a react based employee directory application that will rende
 As A user ... I WANT to be able to view my entire employee directory at once ... SO THAT I have quick access to their information.
 
 ## Screenshots
-<img src="Developer-Profile-Generator-Screenshot.gif">
+<img src="Screenshot_1.png">
+<img src="Screenshot_2.png">
